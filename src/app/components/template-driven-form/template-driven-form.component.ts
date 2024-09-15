@@ -35,6 +35,19 @@ export class TemplateDrivenFormComponent implements OnInit {
       })
     }, 200)
 
+    setTimeout(() => {
+      this.frm?.controls['email']?.setValue('kam@gmsail.com');
+    }, 400);
+
+    setTimeout(() => {
+      this.frm?.control.patchValue({
+        address: {
+          city: 'Izmir',
+          country: 'Istanbul'
+        }
+      });
+    }, 400);
+
   }
 
 
