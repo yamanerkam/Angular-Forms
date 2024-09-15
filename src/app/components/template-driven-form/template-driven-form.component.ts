@@ -16,8 +16,11 @@ export class TemplateDrivenFormComponent implements OnInit {
     console.log("submit:" + this.frm?.submitted)
     console.log("touched:" + this.frm?.touched)
     console.log();
+  }
 
-
+  resetForm() {
+    console.log("reset")
+    this.frm?.reset()
   }
   constructor() { }
 
