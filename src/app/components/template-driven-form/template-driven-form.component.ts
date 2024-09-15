@@ -10,8 +10,12 @@ export class TemplateDrivenFormComponent implements OnInit {
   @ViewChild("frm", { static: false }) frm: NgForm | undefined;
 
   submit(data: any, form: any) {
-    console.log(data);
+    console.log(this.frm);
     console.log(this.frm?.value)
+    console.log("valid:" + this.frm?.valid)
+    console.log("submit:" + this.frm?.submitted)
+    console.log("touched:" + this.frm?.touched)
+
   }
   constructor() { }
 
