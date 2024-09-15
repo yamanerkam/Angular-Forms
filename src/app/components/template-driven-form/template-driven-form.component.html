@@ -1,8 +1,12 @@
 <h1>Template Driven Form</h1>
 <form #frm="ngForm" (ngSubmit)="submit(frm.value,frm)">
-    <input type="text" placeholder="Name" name="name" ngModel> <br>
+    <input required type="text" #fname="ngModel" placeholder="Name" name="name" ngModel> <br>
     <input type="text" placeholder="Surname" name="surname" ngModel> <br>
     <input type="email" placeholder="Email" name="email" ngModel> <br>
-    <input type="tel" placeholder="Tel" name="tel" ngModel> <br>
+    <div ngModelGroup="address">
+        <input type="text" name="country" placeholder="Country" ngModel> <br>
+        <input type="text" name="city" ngModel placeholder="City"> <br>
+        <input type="text" name="addressLong" ngModel placeholder="Address">
+    </div>
     <button type="submit">Submit</button> 
 </form>
