@@ -1,5 +1,5 @@
 <h1>Template Driven Form</h1>
-<form #frm="ngForm" (ngSubmit)="submit(frm.value)">
+<form #frm="ngForm" (ngSubmit)="submit(frm.value,frm)">
     <input type="text" placeholder="Name" name="name" ngModel> <br>
     <input type="text" placeholder="Surname" name="surname" ngModel> <br>
     <input type="email" placeholder="Email" name="email" ngModel> <br>
