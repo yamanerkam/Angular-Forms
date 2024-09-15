@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemplateDrivenFormComponent implements OnInit {
 
+  submit(data: any) {
+    console.log(data);
+  }
   constructor() { }
 
   ngOnInit(): void {
   }
+
+
 
 }
