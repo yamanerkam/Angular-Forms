@@ -22,6 +22,19 @@ export class TemplateDrivenFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.frm?.setValue({
+        name: "kam",
+        surname: '',
+        email: '',
+        address: {
+          country: "",
+          city: "",
+          addressLong: ""
+        }
+      })
+    }, 200)
+
   }
 
 
