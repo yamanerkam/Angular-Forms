@@ -22,8 +22,21 @@ export class ModelDrivenFormComponent implements OnInit {
         city: ["", Validators.required],
         addressLong: ["", Validators.required]
       })
-
     })
+
+    this.frm.valueChanges.subscribe({
+      next: data => {
+        console.log(data)
+      }
+    })
+
+    this.frm.statusChanges.subscribe({
+      next: data => {
+        console.log(data)
+      }
+    })
+
+
   }
   onSubmit() {
     console.log(this.frm.value)
