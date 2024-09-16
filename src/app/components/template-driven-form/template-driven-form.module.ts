@@ -10,6 +10,11 @@ import { TemplateDrivenFormComponent } from './template-driven-form.component';
   imports: [
     CommonModule,
     FormsModule
-  ], exports: [TemplateDrivenFormComponent]
+  ],
+  exports: [TemplateDrivenFormComponent]
 })
-export class TemplateDrivenFormModule { }
+export class TemplateDrivenFormModule {
+  // Reactive form is the other name
+
+
+}
