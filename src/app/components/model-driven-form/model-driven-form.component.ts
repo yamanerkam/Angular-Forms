@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-model-driven-form',
@@ -13,20 +13,21 @@ export class ModelDrivenFormComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder) {
     this.frm = formBuilder.group({
-      name: ["kam"],
-      surname: ["yaman"],
-      email: ["kam35@gmail.com"],
+      name: ["kam", [Validators.required, Validators.minLength(3)]],
+      surname: ["yaman", Validators.required],
+      email: ["kam35@gmail.com", [Validators.required, Validators.email]],
       tel: [232],
       address: formBuilder.group({
-        country: [""],
-        city: [""],
-        addressLong: [""]
+        country: ["", Validators.required],
+        city: ["", Validators.required],
+        addressLong: ["", Validators.required]
       })
 
     })
   }
   onSubmit() {
     console.log(this.frm.value)
+    console.log(this.frm.valid)
   }
   ngOnInit(): void {
   }
