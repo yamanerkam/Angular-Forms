@@ -29,6 +29,9 @@ export class ModelDrivenFormComponent implements OnInit {
     console.log(this.frm.value)
     console.log(this.frm.valid)
   }
+  ok() {
+    this.frm.get("name")?.setValue("", { onlySelf: true })
+  }
   ngOnInit(): void {
   }
 
