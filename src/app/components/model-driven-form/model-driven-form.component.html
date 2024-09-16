@@ -4,6 +4,11 @@
     <input type="text" placeholder="Surname" name="surname" formControlName="surname" > <br>
     <input type="email" placeholder="Email" name="email"  formControlName="email"> <br>
     <input type="tel" placeholder="Tel" name="tel"  formControlName="tel"> <br>
+    <div formGroupName="address">
+        <input type="text" name="country" placeholder="Country" formControlName="country" > <br>
+        <input type="text" name="city" placeholder="City" formControlName="city"> <br>
+        <input type="text" name="addressLong" placeholder="Address" formControlName="addressLong">
+    </div>
 
     <button>Submit</button>
 </form>

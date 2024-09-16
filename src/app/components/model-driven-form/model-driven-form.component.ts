@@ -16,7 +16,12 @@ export class ModelDrivenFormComponent implements OnInit {
       name: ["kam"],
       surname: ["yaman"],
       email: ["kam35@gmail.com"],
-      tel: [232]
+      tel: [232],
+      address: formBuilder.group({
+        country: [""],
+        city: [""],
+        addressLong: [""]
+      })
 
     })
   }
