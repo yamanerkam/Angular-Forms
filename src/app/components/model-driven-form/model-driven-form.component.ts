@@ -15,7 +15,8 @@ export class ModelDrivenFormComponent implements OnInit {
     this.frm = formBuilder.group({
       name: ["kam"],
       surname: ["yaman"],
-      email: ["kam35@gmail.com"]
+      email: ["kam35@gmail.com"],
+      tel: [232]
 
     })
   }
